@@ -1,1 +1,3 @@
-# Insurance_MAAzure_Webapp
+# Insurance_MSzure_Webapp
+
+Insurance model using pycaret, Flask, HerokuApp, and MSAzure webapp.
