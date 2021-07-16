@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import numpy as np
 
+
 app = Flask(__name__)
 
 model = load_model('deployment_28042020')
@@ -31,4 +32,4 @@ def predict_api():
     return jsonify(output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0',port=5000)

@@ -1,4 +1,6 @@
-FROM python:3.7
+# syntax=docker/dockerfile:1
+
+FROM python:3.8.8
 
 RUN pip install virtualenv
 ENV VIRTUAL_ENV=/venv
@@ -9,10 +11,11 @@ WORKDIR /app
 ADD . /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-# Expose port 
+# Expose port
 EXPOSE 5000
+
 
 # Run the application:
 CMD ["python", "app.py"]
